@@ -62,3 +62,22 @@ Because the Nix store grows over time, you can clean up unused packages  with:  
 
 
 
+
+
+nano shell.nix
+
+
+
+{ pkgs ? import <nixpkgs> {} }:
+
+pkgs.mkShell {
+  buildInputs = [
+    pkgs.nodejs_20
+    pkgs.yarn
+  ];
+}
+
+
+
+
+
