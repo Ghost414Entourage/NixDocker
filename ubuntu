@@ -58,5 +58,7 @@ It’s a content-addressed store where Nix puts all packages, build results, and
 
 nix-collect-garbage -d
 
+Because the Nix store grows over time, you can clean up unused packages  with:  nix-collect-garbage 
+
 
 
