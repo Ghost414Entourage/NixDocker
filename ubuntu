@@ -1,3 +1,35 @@
 apt-get update -y && apt update -y && apt-get upgrade -y && apt upgrade -y && apt install aptitude -y && aptitude full-upgrade -y
 
 sh <(curl -L https://nixos.org/nix/install)  --daemon 
+
+ . ~/.nix-profile/etc/profile.d/nix.sh
+
+echo '. "$HOME/.nix-profile/etc/profile.d/nix.sh"' >> ~/.bashrc
+
+which nix
+
+sh <(curl -L https://nixos.org/nix/install)  --daemon
+
+mkdir -p ~/.config/nix  
+
+echo "experimental-features = nix-command  
+
+flakes" >> ~/.config/nix/nix.conf 
+
+nix-channel --add https://nixos.org/channels/nixos-24.05 nixpkgs
+
+nix-channel --update 
+
+nix-channel --list
+
+
+
+
+nano /root/.config/nix/nix.conf
+
+experimental-features = nix-command flakes
+
+
+
+
+
