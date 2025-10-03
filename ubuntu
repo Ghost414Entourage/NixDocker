@@ -129,6 +129,64 @@ nix-shell -p nodejs_20 yarn git python3
 
 
 
+nano shell.nix
+
+
+{ pkgs ? import <nixpkgs> {} }:
+
+pkgs.mkShell {
+  buildInputs = [
+    pkgs.nodejs_20
+    pkgs.yarn
+  ];
+}
+
+
+
+
+
+
+let
+  pkgs = import (builtins.fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/nixos-24.05.tar.gz";
+  }) {};
+in
+pkgs.mkShell {
+  buildInputs = [
+    pkgs.nodejs_20
+    pkgs.yarn
+  ];
+}
+
+
+
+
+nix-shell
+
+
+
+nix build -f shell.nix
+
+
+
+nix build → Tells Nix to build a derivation.
+-f shell.nix → Points Nix to your Nix expression file (shell.nix) instead of a default location.
+Nix evaluates shell.nix and builds the environment defined there.
+
+
+./result/bin/node --version
+
+
+nix-channel --update
+
+
+nix-collect-garbage
+nix-collect-garbage -d
+
+
+
+
+
 
 
 
