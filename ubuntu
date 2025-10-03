@@ -48,3 +48,12 @@ nix-shell
 
 node --version
 
+
+
+
+What /nix/store is
+It’s a content-addressed store where Nix puts all packages, build results, and dependencies.
+
+
+
+
