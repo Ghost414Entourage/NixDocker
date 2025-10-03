@@ -32,4 +32,19 @@ experimental-features = nix-command flakes
 
 
 
+nano shell.nix
+
+{ pkgs ? import <nixpkgs> {} }:
+
+pkgs.mkShell {
+  buildInputs = [
+    pkgs.nodejs_20
+  ];
+}
+
+
+
+nix-shell
+
+node --version
 
