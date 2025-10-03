@@ -116,6 +116,17 @@ Links the package from /nix/store into your ~/.nix-profile.
 
 
 
+nix-shell -p nodejs_20 yarn
+
+nix-shell → Starts a temporary development shell.
+-p → Specifies packages to include in this shell:
+nodejs_20 → Node.js 20.x
+yarn → Yarn package manager
+
+nix-shell -p nodejs_20 yarn git python3
+
+
+
 
 
 
