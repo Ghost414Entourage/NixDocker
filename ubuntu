@@ -1,0 +1,2 @@
+apt-get update -y && apt update -y && apt-get upgrade -y && apt upgrade -y && apt install aptitude -y && aptitude full-upgrade -y
+
