@@ -99,6 +99,24 @@ pkgs.mkShell {
 
 
 
+nix search nixpkgs nodejs 
+
+
+
+
+nix-env -iA nixpkgs.nodejs_20
+
+
+nix-env → Nix’s per-user package manager. Installs packages into your user profile (~/.nix-profile).
+-iA → Install by attribute path.
+-i = install
+-A = attribute, e.g., nixpkgs.nodejs_20
+Advantages: unambiguous, faster, works across channels.
+Links the package from /nix/store into your ~/.nix-profile.
+
+
+
+
 
 
 
