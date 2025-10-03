@@ -50,6 +50,7 @@ node --version
 
 which node 
 
+nix shell nixpkgs#go_1_21 
 
 
 What /nix/store is
