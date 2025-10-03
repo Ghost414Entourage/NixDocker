@@ -185,6 +185,26 @@ nix-collect-garbage -d
 
 
 
+System-wide installation (optional)
+sudo nix-env -iA nixpkgs.nodejs_20
+sudo nix-env -iA nixpkgs.yarn
+Installs into /nix/var/nix/profiles/system or root profile.
+Make sure /etc/profile.d/nix.sh is sourced for all users.
+
+
+# User profile
+nix profile install nixpkgs#nodejs_20 nixpkgs#yarn
+
+# System profile
+sudo nix profile install nixpkgs#nodejs_20 nixpkgs#yarn
+
+
+nix-shell = temporary, ephemeral → disappears when you exit.
+nix-env or nix profile install = permanent → stays in your environment.
+
+
+
+. $HOME/.nix-profile/etc/profile.d/nix.sh
 
 
 
