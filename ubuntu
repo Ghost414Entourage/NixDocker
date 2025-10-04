@@ -208,5 +208,23 @@ nix-env or nix profile install = permanent → stays in your environment.
 
 
 
+nix-env -iA nixpkgs.docker
+
+
+nix profile install nixpkgs#docker
+
+
+which dockerd
+# or
+ls ~/.nix-profile/bin/dockerd
+
+
+
+sudo /root/.nix-profile/bin/dockerd &
+
+/root/.nix-profile/bin/dockerd
+
+sudo env "PATH=$PATH" dockerd &
+
 
 
