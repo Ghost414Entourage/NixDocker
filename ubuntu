@@ -2,6 +2,16 @@ apt-get update -y && apt update -y && apt-get upgrade -y && apt upgrade -y && ap
 
 sh <(curl -L https://nixos.org/nix/install)  --daemon 
 
+
+Multi-user installation:
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
+
+Single-user installation:
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon
+
+
+
+
  . ~/.nix-profile/etc/profile.d/nix.sh
 
 echo '. "$HOME/.nix-profile/etc/profile.d/nix.sh"' >> ~/.bashrc
